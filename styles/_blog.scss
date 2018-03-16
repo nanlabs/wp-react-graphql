@@ -1,0 +1,22 @@
+
+.post-list {
+
+}
+
+.excerpt {
+  margin: $gutter-width-lg 0;
+
+  img {
+    width: 300px;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+  }
+
+  p {
+    font-style: italic;
+    margin-top: $gutter-width-sm;
+  }
+}

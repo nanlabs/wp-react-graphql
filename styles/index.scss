@@ -1,0 +1,70 @@
+@import '../node_modules/reset-scss/reset.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import 'variables';
+@import 'blog';
+
+body {
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+}
+
+.container {
+  margin: $gutter-width-md;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+  a {
+    margin: $gutter-width-xs;
+    padding: $gutter-width-xs;
+    border-bottom: 2px solid $brand-pale-color;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      border-bottom-color: $brand-primary-color;
+    }
+    &.active {
+      border-bottom-color: $brand-secondary-color;
+    }
+  }
+  &.inverse {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    a {
+      margin: $gutter-width-xs;
+      &:first-child {
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .logotype {
+    height: 30px;
+    margin-left: 20px;
+  }
+  .isotype {
+    height: 50px;
+  }
+}
+
+.blog, 
+.page {
+  img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
