@@ -24,7 +24,12 @@ const Nav = (props) => {
 
 export default graphql(gql`
   query GetFirstLevelPages {
-    pages(first: 20) {
+    pages(first: 100, where: {
+      orderby: {
+        field: DATE,
+        order: ASC
+      }
+    }) {
       items: edges {
         page: node {
           title

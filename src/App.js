@@ -11,7 +11,6 @@ const App = () => (
       <Route path="/blog" component={Blog} />
       <Route path="/:parent/:slug" component={Page} />
       <Route path="/:slug" component={Page} />
-      <Redirect to="/home" />
     </Switch>
   </div>
 );
