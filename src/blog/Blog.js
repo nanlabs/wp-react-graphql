@@ -8,6 +8,7 @@ import CategoryList from './CategoryList';
 const Blog = ({ match }) => (
   <div className="blog">
     <div>
+      <h2>Categories</h2>
       <Categories />
     </div>
     <Switch>

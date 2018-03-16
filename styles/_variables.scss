@@ -13,6 +13,7 @@ $gutter-width-md: 15px;
 $gutter-width-lg: 30px;
 $gutter-width-xl: 45px;
 
-$brand-primary-color:   #5d73f5;
-$brand-secondary-color: #02E8E4;
-$brand-pale-color:      #dadada;
+$brand-primary-color:       darkslateblue;
+$brand-primary-lighter-color: lighten($brand-primary-color, 20);
+$brand-secondary-color:     #02E8E4;
+$brand-pale-color:          #dadada;

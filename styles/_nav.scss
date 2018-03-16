@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: $gutter-width-md;
+  background: $brand-primary-color;
+  a {
+    background: $brand-primary-lighter-color;
+    color: $brand-pale-color;
+    margin: $gutter-width-xs;
+    padding: $gutter-width-xs;
+    white-space: nowrap;
+    &:hover,
+    &.active {
+      background: $brand-pale-color;
+      color: $brand-primary-lighter-color;
+    }
+  }
+  &.inverse {
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    a {
+      margin: $gutter-width-xs;
+    }
+  }
+}

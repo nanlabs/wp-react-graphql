@@ -8,7 +8,7 @@ const Nav = (props) => {
   const pages = (props.data.pages && props.data.pages.items) ? props.data.pages.items : [];
 
   return (
-    <nav className="inverse">
+    <nav>
       { pages.map(item => {
         return (
           <Link key={item.page.slug} 
@@ -24,10 +24,9 @@ const Nav = (props) => {
 
 export default graphql(gql`
   query GetFirstLevelPages {
-    pages {
+    pages(first: 20) {
       items: edges {
         page: node {
-          id
           title
           slug
         }
