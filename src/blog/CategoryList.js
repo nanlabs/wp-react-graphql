@@ -17,7 +17,7 @@ class CategoryList extends Component {
     
     return (
       <div className="post-list">
-        { posts.map(post => <Excerpt key={post.node.id} post={post.node} />) }
+        { posts.map(post => <Excerpt key={post.node.slug} post={post.node} />) }
       </div>
     );
   }
@@ -29,21 +29,16 @@ const GetPostsByCategory = gql`
     categories(first: $first, where: $where) {
       edges {
         node {
-          id
           name
           slug
           count
           posts {
             edges {
               node {
-                id
                 title
                 date
                 excerpt
                 slug
-                author {
-                  name
-                }
                 featuredImage {
                   sourceUrl
                 }

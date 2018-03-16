@@ -13,7 +13,7 @@ class List extends Component {
     
     return (
       <div className="post-list">
-        { posts.map(post => <Excerpt key={post.node.id} post={post.node} />) }
+        { posts.map(post => <Excerpt key={post.node.slug} post={post.node} />) }
       </div>
     );
   }
@@ -25,17 +25,10 @@ export default graphql(gql`
     posts {
       edges {
         node {
-          id
           title
           date
           excerpt
           slug
-          author {
-            name
-            avatar {
-              url
-            }
-          }
           featuredImage {
             sourceUrl
           }

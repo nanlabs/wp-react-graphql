@@ -13,7 +13,7 @@
   .excerpt {
     width: calc(100% / 3);
     margin: $gutter-width-lg 0;
-    padding: $gutter-width-lg;
+    padding: 0 $gutter-width-lg;
 
     .thumbnail {
       width: 100%;
@@ -35,17 +35,7 @@
         font-weight: $font-weight-bold;
         color: gray;
       }
-  
-      // h3 {
-      //   font-size: $font-size-sm;
-      // }
-  
-      // .avatar {
-      //   width: 96px;
-      //   height: 96px;
-      //   border-radius: 50px;
-      // }
-  
+      
       p {
         font-weight: $font-weight-light;
         margin-top: $gutter-width-sm;
