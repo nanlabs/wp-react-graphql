@@ -20,3 +20,15 @@ body {
     max-height: 100px;
   }
 }
+
+button {
+  text-transform: uppercase;
+  padding: $gutter-width-xs;
+  border: 1px solid $brand-primary-color;
+  color: $brand-primary-color;
+
+  &:hover {
+    background-color: $brand-primary-color;
+    color: $brand-pale-color;
+  }
+}
