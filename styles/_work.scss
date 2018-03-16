@@ -1,0 +1,25 @@
+
+.work--projects-section {
+
+  .our-work {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      width: calc(100% / 4);
+      margin: $gutter-width-lg 0;
+      padding: 0 $gutter-width-lg;
+    }
+
+    & > p {
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: initial;
+      width: 100%;
+    }
+  }
+
+}
