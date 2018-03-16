@@ -7,7 +7,6 @@ class List extends Component {
 
   render() {
     let { loading, error, posts, fetchMore, loadMoreEntries } = this.props;
-    console.log('this.props.data: ', this.props);
 
     if (loading) {
       return (
@@ -20,9 +19,11 @@ class List extends Component {
     }
     
     return (
-      <div className="post-list">
-        { posts.edges.map(post => <Excerpt key={post.node.slug} post={post.node} />) }
-        { posts.pageInfo.hasNextPage && <button onClick={loadMoreEntries}>Load More</button> }
+      <div>
+        <div className="post-list">
+          { posts.edges.map(post => <Excerpt key={post.node.slug} post={post.node} />) }
+          { posts.pageInfo.hasNextPage && <button onClick={loadMoreEntries}>Load More</button> }
+        </div>
       </div>
     );
   }
@@ -64,7 +65,6 @@ export default graphql(PaginatedPostsQuery, {
       loading,
       posts,
       loadMoreEntries: () => {
-        console.log('loadMoreEntries function');
         return fetchMore({
           query: PaginatedPostsQuery,
           variables: {

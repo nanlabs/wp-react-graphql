@@ -27,8 +27,20 @@ button {
   border: 1px solid $brand-primary-color;
   color: $brand-primary-color;
 
-  &:hover {
+  &:hover,
+  &.inverted {
     background-color: $brand-primary-color;
     color: $brand-pale-color;
   }
+}
+
+.search-box {
+
+  input {
+    height: 30px;
+    padding: 5px;
+    border: 1px solid $brand-primary-color;
+    border-right: none;
+  }
+
 }
