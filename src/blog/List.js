@@ -32,6 +32,9 @@ export default graphql(gql`
           slug
           author {
             name
+            avatar {
+              url
+            }
           }
           featuredImage {
             sourceUrl
