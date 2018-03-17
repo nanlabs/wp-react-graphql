@@ -5,21 +5,32 @@ import gql from 'graphql-tag';
 
 const Nav = (props) => {
 
-  const pages = (props.data.pages && props.data.pages.items) ? props.data.pages.items : [];
+  const { loading, pages } = props.data;
 
-  return (
-    <nav>
-      { pages.map(item => {
-        return (
-          <Link key={item.page.slug} 
-                to={`/${item.page.slug}`}
-                className={(props.location.pathname == `/${item.page.slug}`) ? 'active' : '' }>
-            {item.page.title}
-          </Link>
-        );
-      }) }
-    </nav>
-  );
+  if (loading) {
+    return (
+      <div>Loading...</div>
+    );
+  }
+
+  if (pages.items) {
+    return (
+      <nav>
+        { pages.items.map(item => {
+          return (
+            <Link key={item.page.slug} 
+                  to={`/${item.page.slug}`}
+                  className={(props.location.pathname == `/${item.page.slug}`) ? 'active' : '' }>
+              {item.page.title}
+            </Link>
+          );
+        }) }
+      </nav>
+    );
+  }
+
+  return (<div>No pages</div>);
+
 };
 
 export default graphql(gql`
