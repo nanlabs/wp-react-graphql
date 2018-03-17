@@ -3,12 +3,23 @@ import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import { sanitize } from '../commons/HtmlSanitizer';
 
-const Post = (props) => (
-  <div>
-    <h1>{(props.data.post) ? props.data.post.title : '-'}</h1>
-    <div className="content" dangerouslySetInnerHTML={{__html: (props.data.post) ? sanitize(props.data.post.content) : ''}}></div>
-  </div>
-);
+const Post = (props) => {
+  const { post, loading } = props.data;
+  if (loading) {
+    return (
+      <div>Loading...</div>
+    );
+  }
+  return (
+    <div className="post">
+      { post.featuredImage && <img src={post.featuredImage.sourceUrl} className="featured-img" />}
+      <div className="post-content">
+        <h1>{post.title}</h1>
+        <div className="content" dangerouslySetInnerHTML={{__html: sanitize(post.content)}}></div>
+      </div>
+    </div>
+  );
+}
 
 const GetPostBySlug = gql`
   query GetPostBySlug($slug: String) {
@@ -19,7 +30,6 @@ const GetPostBySlug = gql`
       slug
       uri
       featuredImage {
-        id
         sourceUrl
       }
       author {

@@ -53,4 +53,44 @@
     }
 
   }
+
+  .post {
+    margin: $gutter-width-lg;
+
+    .featured-img {
+      position: relative;
+      width: 100%;
+      max-height: initial;
+      max-width: initial;
+    }
+
+    .post-content {
+      position: relative;
+      background-color: white;
+      width: 80%;
+      margin: -300px auto;
+      padding: $gutter-width-lg;
+
+      h1 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: $gutter-width-lg;
+      }
+
+      h2 {
+        margin: $gutter-width-lg 0;
+      }
+
+      h3, p {
+        margin: $gutter-width-sm 0;
+      }
+
+      img {
+        width: 100%;
+        max-height: initial;
+        max-width: initial;
+        margin: $gutter-width-lg 0;
+      }
+    }
+  }
 }
