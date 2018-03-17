@@ -20,8 +20,6 @@
 
     .thumbnail {
       width: 100%;
-      max-width: 100%;
-      max-height: initial;
     }
 
     .excerpt-meta {
@@ -60,8 +58,6 @@
     .featured-img {
       position: relative;
       width: 100%;
-      max-height: initial;
-      max-width: initial;
     }
 
     .post-content {
@@ -74,21 +70,33 @@
       h1 {
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: $gutter-width-lg;
+        margin-top: $gutter-width-md;
+        margin-bottom: $gutter-width-xl;
+        font-size: $font-size-xl;
       }
 
       h2 {
-        margin: $gutter-width-lg 0;
+        margin-top: $gutter-width-xl;
+        margin-bottom: $gutter-width-lg;
+        font-size: $font-size-lg;
       }
 
-      h3, p {
-        margin: $gutter-width-sm 0;
+      h3 {
+        margin-top: $gutter-width-lg;
+        margin-bottom: $gutter-width-md;
+        font-size: $font-size-md;
+      }
+
+      p {
+        font-weight: $font-weight-light;
+        margin: $gutter-width-md 0;
+        b, strong {
+          font-weight: $font-weight-base;
+        }
       }
 
       img {
         width: 100%;
-        max-height: initial;
-        max-width: initial;
         margin: $gutter-width-lg 0;
       }
     }
