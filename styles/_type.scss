@@ -1,0 +1,26 @@
+h1 {
+  text-transform: uppercase;
+  margin-top: $gutter-width-md;
+  margin-bottom: $gutter-width-xl;
+  font-size: $font-size-xl;
+}
+
+h2 {
+  margin-top: $gutter-width-xl;
+  margin-bottom: $gutter-width-lg;
+  font-size: $font-size-lg;
+}
+
+h3 {
+  margin-top: $gutter-width-lg;
+  margin-bottom: $gutter-width-md;
+  font-size: $font-size-md;
+}
+
+p {
+  font-weight: $font-weight-light;
+  margin: $gutter-width-md 0;
+  b, strong {
+    font-weight: $font-weight-base;
+  }
+}

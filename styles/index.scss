@@ -1,7 +1,9 @@
 @import '../node_modules/reset-scss/reset.scss';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 @import 'variables';
+@import 'type';
 @import 'nav';
+@import 'page';
 @import 'blog';
 @import 'work';
 
@@ -12,13 +14,6 @@ body {
 
 .container {
   margin: $gutter-width-md;
-}
-
-.page {
-  img {
-    max-width: 100px;
-    max-height: 100px;
-  }
 }
 
 button {
@@ -35,12 +30,10 @@ button {
 }
 
 .search-box {
-
   input {
     height: 30px;
     padding: 5px;
     border: 1px solid $brand-primary-color;
     border-right: none;
   }
-
 }
